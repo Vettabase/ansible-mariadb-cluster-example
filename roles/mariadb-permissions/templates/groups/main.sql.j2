@@ -40,11 +40,3 @@ GRANT SELECT, UPDATE, DELETE, DROP
     TO 'pmm-client'@'localhost'
 ;
 
-# Replication
-DROP USER IF EXISTS 'replica'@'172.41.22.5';
-CREATE USER 'replica'@'172.41.22.5' IDENTIFIED BY '1sE+p:ecLGaJsfLd';
-GRANT REPLICATION SLAVE
-    ON *.*
-    TO 'replica'@'172.41.22.5'
-;
-
